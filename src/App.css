@@ -1,38 +1,219 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  width: 100%;
+  height: auto;
   min-height: 100vh;
+  background-image: url('./assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+}
+.search {
+  width: 80%;
+  height: 120px;
+  margin: 0 auto;
   display: flex;
+  align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.search::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.search > h2 {
+  margin: 10px 0; 
+  color: #fff;
+  font-size: 28px;
+}
+.search_group {
+  width: 60%;
+  height: 40px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.search_group > input {
+  width: 90%;
+  height: 100%;
+  background: none;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  outline: none;
+  font-size: 16px;
+  text-indent: 10px;
+}
+.search_btn {
+  width: 8%;
+  height: 100%;
+  margin-left: 5px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search_btn > svg {
+  font-size: 18px;
+}
+::placeholder {
+  color: #fff;
+}
+.container {
+  width: 80%;
+  height: auto;
+  min-height: 60vh;
+  margin: 2rem auto 1rem auto;
+  color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.top_content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 250px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main_info {
+  width: 300px;
+  height: 200px;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
 }
+.main_info::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.main_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.temp {
+  display: flex;
+  align-items: flex-start;
+  font-size: 50px;
+}
+.temp > span {
+  margin-top: 12px;
+  margin-left: 5px;
+  font-size: 24px;
+}
+.main_top > div > img {
+  width: 42px;
+  margin: 0;
+}
+.main_top > div > p {
+  margin-top: -10px;
+}
+.location_name {
+  margin-top: 1rem;
+}
+.location_name > h2 {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.location_name >  p {
+  font-size: 15px;
+}
+.time_container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 150px;
+  height: 70px;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+.time_container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bottom_content {
+  width: 100%;
+  height: 300px;
+  padding: 1rem;
+  /* background-color: red; */
+  position: relative;
+  z-index: 1;
+}
+.bottom_content::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.forecast_menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  list-style: none;
+  font-size: 20px;
+}
+.forecast_menu > li {
+  margin: 0 10px;
+}
+
+.forecast_btn {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.forecast_btn::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -5px;
+  transition: all 0.2s ease;
+}
+.forecast_btn:hover::before {
+  width: 100%;
+  transition: all 0.2s ease;
+} 
