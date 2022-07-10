@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './Today.css';
+import React from 'react';
+import '../App.css';
 import { FiSunrise, FiSunset } from 'react-icons/fi'
 
 
